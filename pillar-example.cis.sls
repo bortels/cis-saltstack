@@ -38,7 +38,9 @@ cis_pkgs_to_remove:
   - squid
   - net-snmp
 # You can skip certain pkgs like this:
-# {% if 'webserver' not in grains['id'] %}
+# Simply add the appropriate grain to each device
+# via /etc/salt/grains or similar
+# {% if salt['match.grain']('roles','webserver') %}
 # - httpd
 # {% endif %}
 
