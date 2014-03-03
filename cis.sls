@@ -1,4 +1,4 @@
-{% if grains['os_family'] == 'RedHat' and grains['osrelease'].startswith('6') %}
+{% if salt['match.grain']('os_family:RedHat') and salt['match.grain_pcre']('osrelease:6\.*') %}
 
 ## Copy CIS scripts:
 # Moved to cis-scripts.sls so it can be run separately

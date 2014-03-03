@@ -40,7 +40,7 @@ cis_pkgs_to_remove:
 # You can skip certain pkgs like this:
 # Simply add the appropriate grain to each device
 # via /etc/salt/grains or similar
-# {% if salt['match.grain']('roles','webserver') %}
+# {% if salt['match.grain']('roles:webserver') %}
 # - httpd
 # {% endif %}
 
